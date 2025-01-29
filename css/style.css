@@ -334,7 +334,7 @@ a {
       @media (max-width: 768px) {
         .carousel-caption {
           position: static;
-          padding: 20px;
+          padding: 10px;
           background: rgba(0, 0, 0, 0.5);
         }
         .carousel-caption h1 {
@@ -350,3 +350,65 @@ a {
       .text-color {
         color: #fff
     }
+
+    .slide-in {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .slide-in-left.active,
+    .slide-in-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.8s ease-in;
+    }
+    
+    .fade-in.active {
+      opacity: 1;
+    }
+
+@media (max-width: 576px) {
+  .responsive-heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+  .btn {
+    font-size: 0.875rem;
+  }
+}
